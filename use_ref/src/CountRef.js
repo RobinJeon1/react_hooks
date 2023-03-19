@@ -3,10 +3,14 @@ import { useState, useRef } from "react";
 //CountRef Component
 const CountRef = () => {
   const [count, setCount] = useState(0);
+
+  // { countRef.current = 0 }
   const countRef = useRef(0);
-  console.log(countRef);
 
   console.log("렌더링...");
+
+  //countRef.current
+  console.log("count ref: ", countRef);
 
   const increaseCountState = () => {
     setCount(count + 1);

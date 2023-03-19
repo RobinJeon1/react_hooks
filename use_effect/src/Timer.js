@@ -7,6 +7,7 @@ const Timer = () => {
       console.log("타이머 돌아가는 중....");
     }, 1000);
 
+    //return된 함수는 Component가 Unmount될 때 실행된다.
     // return () => {
     //   clearInterval(timer);
     //   console.log("타이머가 종료되었습니다.");
