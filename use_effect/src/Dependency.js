@@ -21,18 +21,18 @@ const Dependency = () => {
   // Mount 될때 실행
   // count가 변화할 때마다 실행
   useEffect(() => {
-    console.log("count 변화");
+    console.log("count 변화", count);
   }, [count]);
 
   // Mount 될때 실행
   // count가 변화할 때마다 실행
   useEffect(() => {
-    console.log("name 변화");
+    console.log("name 변화", name);
   }, [name]);
 
   // Mount 될때 딱 한번 실행
   useEffect(() => {
-    console.log("마운팅!");
+    console.log("마운트되었습니다");
   }, []);
 
   return (
