@@ -17,6 +17,7 @@ import { ThemeContext } from "./context/ThemeContext";
 
 const Content = () => {
   const { isDark } = useContext(ThemeContext);
+  console.log("ThemeContext: ", ThemeContext);
   return (
     <div
       className="content"
