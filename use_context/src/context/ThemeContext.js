@@ -1,4 +1,4 @@
 import { createContext } from "react";
 
-//Context
-export const ThemeContext = createContext("hi");
+//Context 생성
+export const ThemeContext = createContext(null);
