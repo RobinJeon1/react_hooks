@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 const Header = () => {
   const context = useContext(ThemeContext);
-  console.log("Context: ", context);
+  console.log("Context value: ", context);
 
   return (
     <header
