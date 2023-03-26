@@ -6,12 +6,9 @@ const App = () => {
   const [isDark, setIsDark] = useState(false);
 
   return (
-    <div>
-      <Page isDark={isDark} setIsDark={setIsDark} />
-      {/* <ThemeContext.Provider value={{ isDark, setIsDark }}> */}
-      {/* <Page /> */}
-      {/* </ThemeContext.Provider> */}
-    </div>
+    <ThemeContext.Provider value={{ isDark, setIsDark }}>
+      <Page />
+    </ThemeContext.Provider>
   );
 };
 
