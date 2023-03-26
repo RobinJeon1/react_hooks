@@ -2,15 +2,15 @@ import { ThemeContext } from "./context/ThemeContext";
 import { useContext } from "react";
 
 const Header = () => {
-  const { isDark } = useContext(ThemeContext);
+  const context = useContext(ThemeContext);
+  console.log("Context: ", context);
 
-  console.log("isDark: ", isDark);
   return (
     <header
       className="header"
       style={{
-        backgroundColor: isDark ? "black" : "lightgray",
-        color: isDark ? "white" : "black",
+        backgroundColor: context.isDark ? "black" : "lightgray",
+        color: context.isDark ? "white" : "black",
       }}
     >
       <h1>Welcome Robin!</h1>

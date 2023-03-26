@@ -5,15 +5,16 @@ function App2() {
   const [isKorea, setIsKorea] = useState(true);
 
   //const location = isKorea ? "한국" : "외국";
+
+  // const location = {
+  //   country: isKorea ? "한국" : "외국",
+  // };
+
   const location = useMemo(() => {
     return {
       country: isKorea ? "한국" : "외국",
     };
   }, [isKorea]);
-
-  // {
-  //   country: isKorea ? "한국" : "외국",
-  // };
 
   const handleInput = (e) => {
     setNumber(e.target.value);
