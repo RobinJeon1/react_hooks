@@ -1,25 +1,29 @@
 import { useEffect, useMemo, useState } from "react";
 
+/** App2 Component */
 function App2() {
   const [number, setNumber] = useState(0);
   const [isKorea, setIsKorea] = useState(true);
 
-  //const location = isKorea ? "한국" : "외국";
+  const location = isKorea ? "한국" : "외국";
 
   // const location = {
   //   country: isKorea ? "한국" : "외국",
   // };
 
-  const location = useMemo(() => {
-    return {
-      country: isKorea ? "한국" : "외국",
-    };
-  }, [isKorea]);
+  /** useMemo 사용 */
+  // const location = useMemo(() => {
+  //   return {
+  //     country: isKorea ? "한국" : "외국",
+  //   };
+  // }, [isKorea]);
 
+  //input onChange
   const handleInput = (e) => {
     setNumber(e.target.value);
   };
 
+  //toggle button onClick
   const handleToggle = () => {
     setIsKorea(!isKorea);
   };
@@ -34,7 +38,7 @@ function App2() {
       <input type="number" value={number} onChange={handleInput} />
       <hr />
       <h2>어느 나라에 있나요?</h2>
-      <p>나라: {location.country}</p>
+      <p>나라: {location}</p>
       <button onClick={handleToggle}>여행가자</button>
     </div>
   );

@@ -1,17 +1,22 @@
 import { useState, useEffect, useCallback } from "react";
 
+/** App Component */
 function App() {
   const [number, setNumber] = useState(0);
 
-  // const someFunction = () => {
-  //   console.log(`someFunc: number: ${number}`);
-  //   return;
-  // };
-  const someFunction = useCallback(() => {
+  //button onClick
+  const someFunction = () => {
     console.log(`someFunc: number: ${number}`);
     return;
-  }, [number]);
+  };
 
+  /** useCallback 사용 */
+  // const someFunction = useCallback(() => {
+  //   console.log(`someFunction: number: ${number}`);
+  //   return;
+  // }, [number]);
+
+  //input onChange
   const handleInput = (e) => {
     setNumber(e.target.value);
   };

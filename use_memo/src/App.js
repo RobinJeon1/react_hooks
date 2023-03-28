@@ -13,6 +13,7 @@ const easyCalculate = (number) => {
   return number + 1;
 };
 
+/** App Component */
 function App() {
   const [hardNumber, setHardNumber] = useState(1);
   const [easyNumber, setEasyNumber] = useState(1);
